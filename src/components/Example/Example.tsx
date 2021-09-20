@@ -9,7 +9,7 @@ type ExampleProps = {
   title: string
 }
 
-const Example = (props: ExampleProps): JSX.Element => {
+const Example = (props: ExampleProps): React.ReactElement => {
   return <Salute>{props.title}, this is your very first example</Salute>
 }
 
