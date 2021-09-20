@@ -1,4 +1,30 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint-staged
+echo '♾️ Running lint and building your project before committing'
+
+yarn lint-staged || (
+    echo '🤡 😰  WOW, code smells detected.
+    Please, check the error messages and FIX IT 😡
+
+    "When in doubt, go to the library."
+    – Ron Weasley, Harry Potter and the Chamber of Secrets, Chapter 14
+    '
+)
+
+echo '🏗️  OK... Trying to build now.'
+
+yarn build ||
+(
+    echo '❌ 👺 It`s better call help... your build has failed! 
+        It`s probably was made by 👽
+        Check the error message.
+    '
+    false;
+)
+
+echo '🚀 YEAH! - you`re right
+
+    "We are only as strong as we are united, as weak as we are divided."
+    – Albus Dumbledore, Harry Potter and the Goblet of Fire, Chapter 37
+'
