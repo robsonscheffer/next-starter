@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Salute = styled.span`
   color: #808080;
+  background-color: red;
 `
 
 type ExampleProps = {
