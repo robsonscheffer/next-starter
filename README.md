@@ -31,4 +31,14 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+To run storybook
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+To know more please see the [Awesome UI](http://localhost:6006/?path=/story/awesome-ui--page)
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
