@@ -1,9 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { color, space, compose, ColorProps, SpaceProps } from 'styled-system'
 
-const Salute = styled.span`
-  color: #808080;
-  background-color: red;
+type SaluteProps = ColorProps & SpaceProps
+
+const Salute = styled.span<SaluteProps>`
+  box-sizing: border-box;
+  padding: 1;
+  ${compose(color, space)};
 `
 
 type ExampleProps = {
@@ -11,7 +15,11 @@ type ExampleProps = {
 }
 
 const Example = (props: ExampleProps): React.ReactElement => {
-  return <Salute>{props.title}, this is your very first example</Salute>
+  return (
+    <Salute color="secondary" bg="primary" p="lg">
+      {props.title}, this is your very first example
+    </Salute>
+  )
 }
 
 export default Example
